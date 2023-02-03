@@ -1,0 +1,22 @@
+{
+    "name": "olegskil/pop-it-mvc",
+    "description": "Simple mvc fraemwork",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "olegskil",
+            "email": "gr692kov@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {"php": "^7.4 | ^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Src\\": "core/Src/",
+            "": "app/"
+        }
+    }
+ 
+}
