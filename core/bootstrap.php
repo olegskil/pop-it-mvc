@@ -5,8 +5,11 @@ const DIR_CONFIG = '/../config';
 //Подключение автозагрузчика composer
 require_once __DIR__ . '/../vendor/autoload.php';
 
-require_once __DIR__ . '/../routes/web.php';
-$app = new Src\Application(new Src\Settings(getConfigs()));
+//Создание экземпляра приложения
+$app = new Src\Application(require __DIR__ . '/../config/app.php');
+
+//Подключение хелперов
+require_once __DIR__ .  '/../core/helpers.php';
 
 //Функция возвращает глобальный экземпляр приложения
 function app() 
@@ -29,4 +32,4 @@ return $settings;
 }
 require_once __DIR__ . '/../routes/web.php';
 
-return new Src\Application(new Src\Settings(getConfigs()));
+//return new Src\Application(new Src\Settings(getConfigs()));
