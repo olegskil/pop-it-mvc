@@ -36,6 +36,7 @@ class Site
      
             if (User::create($request->all())) {
                 app()->route->redirect('/login');
+                return false;
             }
         }
         return new View('site.signup');
